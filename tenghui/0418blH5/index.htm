@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="GB2312">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://gz.house.qq.com/house/0406bl/zzq_base.css">
+    <link href="http://gz.game.leju.com/201604/tyhjhy/css/swiper3.06.min.css" rel="stylesheet">
+    <title>一封来自保利的信</title>
+    <style>
+        body,
+        html,
+        .swiper-container {
+            height: 100%;
+        }
+        
+        .slide1 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg1.png) no-repeat;
+        }
+        
+        .slide2 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg2.png) no-repeat;
+        }
+        
+        .slide3 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg3.png) no-repeat;
+        }
+        
+        .slide4 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg4.png) no-repeat;
+        }
+        
+        .slide5 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg5.png) no-repeat;
+        }
+        
+        .slide6 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg6.png) no-repeat;
+        }
+        
+        .slide8 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg7.png) no-repeat;
+        }
+        
+        .slide9 {
+            background: url(bg8.png) no-repeat;
+        }
+        
+        .swiper-slide {
+            height: 100%;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+        
+        img.kz {
+            width: 40%;
+            position: absolute;
+            right: 0;
+            bottom: 10%;
+            transform: translate3d(100%, 0, 0);
+        }
+        
+        .animate1 {
+            animation: kz 0.8s forwards ease-out;
+        }
+        
+        @-webkit-keyframes kz {
+            0% {
+                transform: translate3d(100%, 0, 0);
+            }
+            100% {
+                transform: translate3d(-24%, 0, 0);
+            }
+        }
+        
+        .xf {
+            position: absolute;
+            left: -10%;
+            top: 23%;
+            width: 32%;
+            opacity: 0;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        
+        .animate2 {
+            animation: xf 3s 0.9s forwards linear;
+        }
+        
+        @-webkit-keyframes xf {
+            0% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+            25% {
+                opacity: 1;
+                transform: translate3d(100%, 40%, 0) scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: translate3d(20%, 80%, 0) scale(0.7);
+            }
+            90% {
+                opacity: 1;
+                transform: translate3d(155%, 140%, 0) scale(0.6);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(155%, 140%, 0) scale(0.6);
+            }
+        }
+        
+        .txt,
+        .txt5 {
+            position: absolute;
+            left: 10%;
+            top: 35%;
+            opacity: 0;
+            text-align: center
+        }
+        
+        .txt p,
+        .txt5 p {
+            font-size: 18px;
+            color: #b81c27;
+            margin-top: 10px;
+            display: inline-block;
+            vertical-align: top;
+            width: 20px;
+            margin-left: 10px;
+            text-align: center
+        }
+        
+        img.lb {
+            width: 54%;
+            position: absolute;
+            left: 0;
+            bottom: 5%;
+            transform: translate3d(-100%, 0, 0)
+        }
+        
+        .animate3 {
+            animation: lb 0.8s forwards ease-out;
+        }
+        
+        .xf1 {
+            position: absolute;
+            right: -10%;
+            top: 23%;
+            width: 32%;
+            opacity: 0;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        
+        .animate4 {
+            animation: xf1 3s 0.9s forwards linear;
+        }
+        
+        @-webkit-keyframes xf1 {
+            0% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+            25% {
+                opacity: 1;
+                transform: translate3d(-100%, 40%, 0) scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: translate3d(-20%, 80%, 0) scale(0.7);
+            }
+            90% {
+                opacity: 1;
+                transform: translate3d(-155%, 140%, 0) scale(0.6);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(-155%, 140%, 0) scale(0.6);
+            }
+        }
+        
+        @-webkit-keyframes lb {
+            0% {
+                transform: translate3d(-100%, 0, 0);
+            }
+            100% {
+                transform: translate3d(16%, 0, 0);
+            }
+        }
+        
+        .txt1,
+        .txt4 {
+            position: absolute;
+            right: 10%;
+            top: 47%;
+            opacity: 0;
+        }
+        
+        .txt4 {
+            top: 42%;
+        }
+        
+        .txt1 p,
+        .txt4 p {
+            font-size: 18px;
+            color: #b81c27;
+            margin-top: 10px;
+            width: 20px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+        
+        img.wb {
+            width: 55%;
+            position: absolute;
+            right: 0;
+            bottom: 15%;
+            transform: translate3d(100%, 0, 0);
+        }
+        
+        .animate5 {
+            animation: wb 0.8s forwards ease-out;
+        }
+        
+        @-webkit-keyframes wb {
+            0% {
+                transform: translate3d(100%, 0, 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        .animate6 {
+            animation: wb1 3.5s 0.9s forwards linear;
+        }
+        
+        @-webkit-keyframes wb1 {
+            0% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+            25% {
+                opacity: 1;
+                transform: translate3d(120%, 50%, 0) scale(0.9);
+            }
+            50% {
+                opacity: 1;
+                transform: translate3d(20%, 120%, 0) scale(0.8);
+            }
+            95% {
+                opacity: 1;
+                transform: translate3d(180%, 245%, 0) scale(0.6);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(180%, 245%, 0) scale(0.6);
+            }
+        }
+        
+        .txt3 {
+            position: absolute;
+            left: 10%;
+            top: 30%;
+            opacity: 0;
+        }
+        
+        .txt3 p {
+            font-size: 18px;
+            color: #b81c27;
+            margin-top: 10px;
+            width: 20px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        .animate7 {
+            animation: dfx 3.5s 0.9s forwards linear;
+        }
+        
+        @-webkit-keyframes dfx {
+            0% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+            25% {
+                opacity: 1;
+                transform: translate3d(-120%, 50%, 0) scale(0.9);
+            }
+            50% {
+                opacity: 1;
+                transform: translate3d(-20%, 140%, 0) scale(0.8);
+            }
+            95% {
+                opacity: 1;
+                transform: translate3d(-94%, 240%, 0) scale(0.6);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(-94%, 240%, 0) scale(0.6);
+            }
+        }
+        
+        img.fl {
+            width: 50%;
+        }
+        
+        ul.personList {
+            width: 100%;
+            background-color: #b81c27;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            opacity: 0;
+        }
+        
+        ul.personList li {
+            width: 33%;
+            opacity: 0;
+        }
+        
+        .animate8 .pic1 {
+            animation: pic1 04s forwards;
+        }
+        
+        @-webkit-keyframes pic1 {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate8 .pic2 {
+            animation: pic2 04s 0.5s forwards;
+        }
+        
+        @-webkit-keyframes pic2 {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate8 .pic3 {
+            animation: pic3 04s 1s forwards;
+        }
+        
+        @-webkit-keyframes pic3 {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate8 .pic4 {
+            animation: pic4 04s 1.5s forwards;
+        }
+        
+        @-webkit-keyframes pic4 {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .animate8 .pic5 {
+            animation: pic5 04s 2s forwards;
+        }
+        
+        @-webkit-keyframes pic5 {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .slide7>img {
+            width: 70%;
+            margin: 3% auto 0;
+            opacity: 0;
+        }
+        
+        .slide7>img.act {
+            animation: act 0.8s forwards linear;
+        }
+        
+        @-webkit-keyframes act {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .slide8>img {
+            width: 30%;
+            margin: 28% auto 0
+        }
+        
+        .slide8>.p1 {
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            margin: 6% auto 0;
+            font-weight: normal;
+            font-family: "pingfang";
+        }
+        
+        .slide8>.p2 {
+            width: 40%;
+            margin: 20px auto;
+            height: 2px;
+            background-color: #85121c;
+            font-family: "pingfang";
+        }
+        
+        .timeInfo {
+            text-align: center;
+        }
+        
+        .timeInfo p {
+            color: #fff;
+            font-size: 16px;
+            font-family: "pingfang";
+        }
+        
+        .timeInfo p.p2 {
+            margin-top: 10px;
+        }
+        
+        .qrcode {
+            margin-top: 6%;
+        }
+        
+        .qrcode img:nth-child(1) {
+            width: 30%;
+            margin: 0 auto
+        }
+        
+        .qrcode img:nth-child(2) {
+            width: 48%;
+            margin: 6% auto
+        }
+    </style>
+</head>
+
+<body onload="load()">
+    <audio preload="autoplay" id="car_audio" src="01.mp3" loop></audio>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- 初始界面 -->
+            <div class="swiper-slide slide1"></div>
+
+            <!-- page1孔子 -->
+            <div class="swiper-slide slide2">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/kz.png" class="kz">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img1.png" class="xf">
+                <div class="txt">
+                    <p>
+                        我要去会会他们 ！
+                    </p>
+                    <p>
+                        “ 有朋自远方来 ，不亦乐乎 ”
+                    </p>
+                </div>
+            </div>
+
+            <!-- page2鲁班 -->
+            <div class="swiper-slide slide3">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/lb.png" class="lb">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img2.png" class="xf1">
+                <div class="txt1">
+                    <p>
+                        有好产品面世 ，怎能错过 ？
+                    </p>
+                    <p>
+                        研究建筑工艺这么多年 ，
+                    </p>
+                </div>
+            </div>
+
+            <!-- page3王勃 -->
+            <div class="swiper-slide slide4">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/wb.png" class="wb">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img1.png" class="xf wbx">
+                <div class="txt3">
+                    <p>
+                        老友推荐的宝贝产品我可不能错过 ！
+                    </p>
+                    <p>
+                        “ 海内存知己 ，天涯若比邻 ”
+                    </p>
+                </div>
+            </div>
+
+            <!-- page4杜甫 -->
+            <div class="swiper-slide slide5">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/df.png" class="lb">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img2.png" class="xf1 dfx">
+                <div class="txt4">
+                    <p>
+                        我要去北京看看这场及时雨 ！
+                    </p>
+                    <p>
+                        “ 好雨知时节 ，当春乃发生 ”
+                    </p>
+                </div>
+            </div>
+
+            <!-- page5范蠡 -->
+            <div class="swiper-slide slide6">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/fl.png" class="kz fl">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img1.png" class="xf flx">
+                <div class="txt5">
+                    <p>
+                        老友的邀约我必须到啊 ！
+                    </p>
+                    <p>
+                        “ 金钱如粪土 ，朋友值千金 ”
+                    </p>
+                </div>
+            </div>
+
+            <!-- 人物汇总 -->
+            <div class="swiper-slide slide7">
+                <ul class="personList">
+                    <li class="pic1">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/fl02.png">
+                    </li>
+                    <li></li>
+                    <li style="width:33.6%" class="pic2">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/lb02.png">
+                    </li>
+                    <li></li>
+                    <li class="pic3">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/kz02.png">
+                    </li>
+                    <li></li>
+                    <li class="pic4">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/df02.png">
+                    </li>
+                    <li></li>
+                    <li style="width:33.6%" class="pic5">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/wb02.png">
+                    </li>
+                </ul>
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img5.png">
+            </div>
+
+            <!-- 邀请信息 -->
+            <div class="swiper-slide slide8">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img3.png">
+                <p class="p1">
+                    POLY&nbsp PLUS&nbsp 更保利的2017
+                </p>
+                <p class="p2"></p>
+                <div class="timeInfo">
+                    <p class="p1">
+                        <span>
+                            2017&nbsp /&nbsp 04 /&nbsp 25
+                        </span>
+                        <span>时间&nbsp /&nbsp 14:00PM</span>
+                    </p>
+                    <p class="p2">
+                        北京&nbsp /&nbsp 时间博物馆 &nbsp/&nbsp 极远厅
+                    </p>
+                </div>
+                <div class="qrcode">
+                    <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/qrCode.png">
+                    <img src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/img4.png">
+                </div>
+            </div>
+
+            <!-- 赴约地址 -->
+            <div class="swiper-slide slide9">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/zepto.min.js"></script>
+    <script type="text/javascript" src="http://gz.game.leju.com/201604/tyhjhy/js/swiper3.06.min.js"></script>
+    <script>
+        function load() {
+            audioAutoPlay('car_audio');;
+        }
+
+        // 解决ios音乐不自动播放的兼容问题
+        function audioAutoPlay(id) {
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function() {
+                audio.play();
+            }, false);
+            document.addEventListener('YixinJSBridgeReady', function() {
+                audio.play();
+            }, false);
+        }
+    </script>
+    <script>
+        $(function() {
+            var swiper = new Swiper('.swiper-container', {
+                mousewheelControl: true,
+                direction: 'vertical',
+                onSlideChangeEnd: function(swiper) {
+                    switch (swiper.activeIndex) {
+                        case 0:
+                            $(".txt").css("opacity", "0");
+                            $(".slide2 .kz").removeClass("animate1");
+                            $(".slide2 .xf").removeClass("animate2");
+                            break;
+                        case 1:
+                            $(".slide2 .kz").addClass("animate1");
+                            $(".slide2 .xf").addClass("animate2");
+                            $(".slide3 .lb").removeClass("animate3");
+                            $(".slide3 .xf1").removeClass("animate4");
+                            $(".txt1").css("opacity", "0");
+                            break;
+                        case 2:
+                            $(".txt").css("opacity", "0");
+                            $(".txt3").css("opacity", "0");
+                            $(".slide2 .kz").removeClass("animate1");
+                            $(".slide2 .xf").removeClass("animate2");
+                            $(".slide3 .lb").addClass("animate3");
+                            $(".slide3 .xf1").addClass("animate4");
+                            $(".slide4 .wb").removeClass("animate5");
+                            $(".slide4 .xf").removeClass("animate6");
+                            break;
+                        case 3:
+                            $(".txt1").css("opacity", "0");
+                            $(".txt4").css("opacity", "0");
+                            $(".slide3 .lb").removeClass("animate3");
+                            $(".slide3 .xf1").removeClass("animate4");
+                            $(".slide4 .wb").addClass("animate5");
+                            $(".slide4 .xf").addClass("animate6");
+                            $(".slide5 .lb").removeClass("animate3");
+                            $(".slide5 .xf1").removeClass("animate4");
+                            break;
+                        case 4:
+                            $(".txt3").css("opacity", "0");
+                            $(".txt5").css("opacity", "0");
+                            $(".slide4 .wb").removeClass("animate5");
+                            $(".slide4 .xf").removeClass("animate6");
+                            $(".slide5 .lb").addClass("animate3");
+                            $(".slide5 .xf1").addClass("animate7");
+                            break;
+                        case 5:
+                            $(".personList").css("opacity", "0");
+                            $(".txt4").css("opacity", "0");
+                            $(".slide5 .lb").removeClass("animate3");
+                            $(".slide5 .xf1").removeClass("animate7");
+                            $(".slide6 .kz").addClass("animate1");
+                            $(".slide6 .xf").addClass("animate2");
+                            $(".personList").removeClass("animate8");
+                            $(".slide7>img").removeClass("act");
+                            break;
+                        case 6:
+                            $(".txt5").css("opacity", "0");
+                            $(".slide6 .kz").removeClass("animate1");
+                            $(".slide6 .xf").removeClass("animate2");
+                            $(".slide7>img").addClass("act");
+                            break;
+                        case 7:
+                            $(".personList").css("opacity", "0");
+                            $(".personList").removeClass("animate8");
+                            $(".slide7>img").removeClass("act");
+
+                    }
+
+                }
+            });
+
+            // 当信封出现时
+            var xf = $(".xf").get(0);
+            var xf1 = $(".xf1").get(0);
+            var wbx = $(".wbx").get(0);
+            var dfx = $(".dfx").get(0);
+            var flx = $(".flx").get(0);
+            var img = $(".slide7>img").get(0);
+            xf.addEventListener("webkitAnimationEnd", function() {
+                setTimeout(function() {
+                    $(".txt").css({
+                        opacity: "1",
+                    })
+                }, 200)
+
+            })
+            xf1.addEventListener("webkitAnimationEnd", function() {
+                setTimeout(function() {
+                    $(".txt1").css({
+                        opacity: "1",
+                    })
+                }, 200)
+            })
+            wbx.addEventListener("webkitAnimationEnd", function() {
+                setTimeout(function() {
+                    $(".txt3").css({
+                        opacity: "1",
+                    })
+                }, 200)
+            })
+            dfx.addEventListener("webkitAnimationEnd", function() {
+                setTimeout(function() {
+                    $(".txt4").css({
+                        opacity: "1",
+                    })
+                }, 200)
+            })
+            flx.addEventListener("webkitAnimationEnd", function() {
+                setTimeout(function() {
+                    $(".txt5").css({
+                        opacity: "1",
+                    })
+                }, 200)
+            })
+            img.addEventListener("webkitAnimationEnd", function() {
+                setTimeout(function() {
+                    $(".personList").css("opacity", "1");
+                    $(".personList").addClass("animate8");
+                }, 200)
+            })
+        })
+    </script>
+    <script>
+        // 分享好友标题
+        var shareTitle = '看完这封信，连圣人都按耐不住了！';
+        // 分享描述
+        var descContent = '';
+        // 分享朋友圈标题
+        var shareTimeLineTitle = '看完这封信，连圣人都按耐不住了！';
+        // 分享缩略图(100x100)
+        var imgUrl = 'http://mat1.gtimg.com/house_guangzhou/house/0419bl/bg1.png'
+            // 分享链接
+        var lineLink = window.location.href;
+        var appid = '';
+
+        function shareFriend() {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "appid": appid,
+                "img_url": imgUrl,
+                "img_width": "120",
+                "img_height": "120",
+                "link": lineLink,
+                "desc": descContent,
+                "title": shareTitle
+            }, function(res) {
+                _report('send_msg', res.err_msg);
+            })
+        }
+
+        function shareTimeline() {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": imgUrl,
+                "img_width": "120",
+                "img_height": "120",
+                "link": lineLink,
+                "desc": descContent,
+                "title": shareTimeLineTitle
+            }, function(res) {
+                _report('timeline', res.err_msg);
+            });
+        }
+
+        function shareWeibo() {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": descContent,
+                "url": lineLink,
+            }, function(res) {
+                _report('weibo', res.err_msg);
+            });
+        }
+
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+            // 分享好友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                shareFriend();
+            });
+
+            // 分享朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {
+                shareTimeline();
+            });
+
+            // 分享微博
+            WeixinJSBridge.on('menu:share:weibo', function(argv) {
+                shareWeibo();
+            });
+        }, false);
+    </script>
+</body>
+
+</html>

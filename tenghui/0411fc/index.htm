@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="GB2312">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>腾讯房产指数</title>
+    <link rel="stylesheet" href="http://gz.house.qq.com/house/0406bl/zzq_base.css">
+    <style>
+        header {
+            position: relative;
+        }
+        
+        ul.navList {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 1000px;
+            margin-left: -500px;
+        }
+        
+        ul.navList li {
+            float: left;
+        }
+        
+        ul.navList li a {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            padding: 0 22px;
+        }
+        
+        ul.navList li:not(:first-child) {
+            border-right: 1px solid #666;
+        }
+        
+        ul.navList li:last-child {
+            border-right: none
+        }
+        
+        ul.navList li a:hover {
+            text-decoration: underline
+        }
+        
+        .tipsCon {
+            position: absolute;
+            left: 50%;
+            top: 62%;
+            width: 340px;
+            margin-left: -170px;
+        }
+        
+        .tipsCon p {
+            position: absolute;
+            left: 20px;
+            bottom: 8px;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .sec {
+            position: relative;
+        }
+        
+        .sec p.posip {
+            position: absolute;
+            width: 30%;
+            left: 25%;
+            top: 18%;
+            color: #fff;
+            font-size: 16px;
+            text-indent: 2em;
+        }
+        
+        ul.indexList {
+            width: 100%;
+        }
+        
+        ul.indexList li {
+            position: absolute;
+            text-align: center;
+            width: 12%;
+        }
+        
+        ul.indexList li span {
+            color: #f5533a;
+            display: inline-block;
+            width: 35%;
+            margin-top: 6%;
+            font-size: 14px;
+            text-align: left;
+            padding-left: 13%;
+        }
+        
+        ul.indexList li span.bg1 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon01.png) no-repeat left center;
+            background-size: 22%
+        }
+        
+        ul.indexList li span.bg2 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon02.png) no-repeat left center;
+            background-size: 18%
+        }
+        
+        ul.indexList li span.bg3 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon03.png) no-repeat left center;
+            background-size: 22%
+        }
+        
+        ul.indexList li span.bg4 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon04.png) no-repeat left center;
+            background-size: 18%
+        }
+        
+        @media screen and (max-width:1140px) {
+            .sec p.posip {
+                font-size: 14px;
+            }
+        }
+        
+        ul.indexList li.li1 {
+            left: 46%;
+            top: 47%
+        }
+        
+        ul.indexList li.li2 {
+            left: 28%;
+            top: 53%
+        }
+        
+        ul.indexList li.li3 {
+            left: 36%;
+            top: 59%
+        }
+        
+        ul.indexList li.li4 {
+            left: 55%;
+            top: 54%
+        }
+        
+        ul.indexList li.li5 {
+            left: 40.5%;
+            top: 75.5%
+        }
+        
+        ul.indexList li.li6 {
+            left: 48%;
+            top: 87%
+        }
+        
+        ul.indexList li.li7 {
+            background-color: #fd533c;
+            left: 26%;
+            top: 78%;
+        }
+        
+        ul.indexList li.li7>p {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6% 0 4% 0;
+        }
+        
+        ul.indexList li.li7>div {
+            background-color: #fff;
+            padding-bottom: 5%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            border: 3px solid #fd533c
+        }
+        
+        ul.indexList li.li7 img {
+            position: absolute;
+            width: 35%;
+            height: 100%;
+            left: 66%;
+            top: -100%;
+        }
+        
+        ul.indexList li.li8 {
+            top: 90%;
+            left: 62%;
+            width: 12%;
+        }
+        
+        ul.indexList li.li8 div {
+            background-color: #fff;
+            border: 6px solid #fd533c;
+            padding-bottom: 6%;
+        }
+        
+        ul.indexList li.li9 {
+            background-color: #fd533c;
+            left: 27%;
+            top: 88%;
+        }
+        
+        ul.indexList li.li9>p {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6% 0 4% 0;
+        }
+        
+        ul.indexList li.li9>div {
+            background-color: #fff;
+            padding-bottom: 5%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            border: 3px solid #fd533c
+        }
+        
+        ul.indexList li.li9 img {
+            position: absolute;
+            width: 40%;
+            height: 284%;
+            left: 70%;
+            top: -270%;
+        }
+        
+        ul.indexList li.li8 {
+            top: 90%;
+            left: 62%;
+            width: 12%;
+        }
+        
+        ul.indexList li.li8 div {
+            background-color: #fff;
+            border: 6px solid #fd533c;
+            padding-bottom: 6%;
+        }
+        
+        ul.indexList li.li8 div p {
+            font-size: 14px;
+            text-align: left;
+            margin-top: 6%;
+            padding-left: 20%;
+        }
+        
+        ul.indexList li.li8 div p.p1 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon01.png) no-repeat 5% center;
+            background-size: 10%
+        }
+        
+        ul.indexList li.li8 div p.p2 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon02.png) no-repeat 6% center;
+            background-size: 8%
+        }
+        
+        ul.indexList li.li8 div p.p3 {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon07.png) no-repeat 6% center;
+            background-size: 9%
+        }
+        
+        ul.indexList li.li10 {
+            background-color: #fd533c;
+            left: 62%;
+            top: 63%;
+        }
+        
+        ul.indexList li.li10>p {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6% 0 4% 0;
+        }
+        
+        ul.indexList li.li10>div {
+            background-color: #fff;
+            padding-bottom: 5%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            border: 3px solid #fd533c
+        }
+        
+        ul.indexList li.li10 img {
+            position: absolute;
+            left: -100%;
+            top: 0;
+            height: 32%;
+        }
+        
+        ul.indexList li.li11 {
+            background-color: #fd533c;
+            left: 57%;
+            top: 71%;
+        }
+        
+        ul.indexList li.li11>p {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6% 0 4% 0;
+        }
+        
+        ul.indexList li.li11>div {
+            background-color: #fff;
+            padding-bottom: 5%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            border: 3px solid #fd533c
+        }
+        
+        ul.indexList li.li11 img {
+            position: absolute;
+            left: -98%;
+            top: -54%;
+            height: 91%;
+        }
+        
+        ul.indexList li.li12 {
+            background-color: #fd533c;
+            left: 56%;
+            top: 79%;
+        }
+        
+        ul.indexList li.li12>p {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6% 0 4% 0;
+        }
+        
+        ul.indexList li.li12>div {
+            background-color: #fff;
+            padding-bottom: 5%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            border: 3px solid #fd533c
+        }
+        
+        ul.indexList li.li12 img {
+            position: absolute;
+            left: -100%;
+            top: -130%;
+            height: 156%;
+            transform: rotate(-10deg);
+        }
+        
+        @media screen and (min-width:1350px) {
+            ul.indexList li.li1 {
+                left: 47%;
+                top: 48%
+            }
+            ul.indexList li.li2 {
+                left: 29%;
+                top: 53.5%
+            }
+        }
+        
+        @media screen and (min-width:1400px) {
+            ul.indexList li.li7 {
+                top: 77%
+            }
+            ul.indexList li.li9 {
+                top: 87%;
+            }
+            ul.indexList li.li12 {
+                left: 55%;
+            }
+        }
+        
+        @media screen and (min-width:1600px) {
+            ul.indexList li.li7 {
+                top: 76%
+            }
+        }
+        
+        @media screen and (min-width:1550px) {
+            ul.indexList li.li9 {
+                top: 86%;
+            }
+            ul.indexList li.li12 {
+                top: 78%
+            }
+            ul.indexList li.li11 {
+                top: 70.5%
+            }
+        }
+        
+        @media screen and (min-width:1800px) {
+            ul.indexList li.li9 {
+                top: 85%
+            }
+        }
+        
+        @media screen and (min-width:1500px) {
+            ul.indexList li.li3 {
+                left: 37%;
+                top: 59.5%
+            }
+            ul.indexList li span.bg2,
+            ul.indexList li span.bg4 {
+                background-size: 14%;
+            }
+            ul.indexList li span.bg1,
+            ul.indexList li span.bg3 {
+                background-size: 18%;
+            }
+        }
+        
+        @media screen and (max-width:1200px) {
+            ul.indexList li span {
+                font-size: 12px;
+            }
+        }
+        
+        @media screen and (max-width:1111px) {
+            ul.indexList li.li9 {
+                top: 89%
+            }
+            ul.indexList li.li12 {
+                top: 79.6%
+            }
+        }
+        
+        @media screen and (max-width:1035px) {
+            ul.indexList li.li9 {
+                top: 90%
+            }
+            ul.indexList li.li6 {
+                top: 88%
+            }
+            ul.indexList li.li10 {
+                top: 62%
+            }
+        }
+    </style>
+    <style>
+        .listCon {
+            position: absolute;
+            width: 51%;
+            left: 50%;
+            bottom: 0;
+            background-color: #354656;
+            padding-bottom: 15px;
+            margin-left: -25.5%;
+        }
+        
+        .navCon {
+            text-align: center;
+            margin-top: -8%
+        }
+        
+        .navCon_c {
+            display: inline-block;
+            width: 22%;
+            position: relative
+        }
+        
+        .navCon_c:nth-child(2) {
+            margin: 0 3%;
+        }
+        
+        .navCon_c span {
+            display: block;
+            text-align: center;
+            margin-bottom: 6%;
+            font-size: 14px;
+            font-size: #333;
+        }
+        
+        .navCon_c p {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            color: #ff314b
+        }
+        
+        .navCon_c .navCon_c_p_a p {
+            color: #8ec21f;
+        }
+        
+        .navCon_c .navCon_c_p_b p {
+            color: #6dc7fc;
+        }
+        
+        .navCon_c_p {
+            width: 100%;
+            position: absolute;
+            left: 0%;
+            top: 55%;
+        }
+        
+        .shopList {
+            margin: 15px auto 0;
+            width: 90%;
+            background-color: #354656;
+        }
+        
+        .shopList li {
+            text-align: center;
+            margin-top: 8px;
+        }
+        
+        .shopList li:first-child {
+            background-color: #fedf50;
+            font-weight: bold
+        }
+        
+        .shopList li:not(:first-child) {
+            background-color: #fff;
+        }
+        
+        .shopList li span {
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 1.5% 0;
+            width: 24%;
+        }
+        
+        .shopList li span:first-child {
+            width: 14%;
+        }
+        
+        .shopList li:first-child span {
+            font-size: 18px;
+            color: #fc7605;
+        }
+        
+        @media screen and (min-width:1400px) {
+            .sec p.posip {
+                line-height: 1.8;
+            }
+            .navCon_c p {
+                font-size: 18px;
+                line-height: 1.4
+            }
+        }
+        
+        @media screen and (min-width:1200px) {
+            .shopList li span {
+                padding: 2% 0;
+            }
+        }
+    </style>
+    <style>
+        .ulList {
+            width: 48%;
+            position: absolute;
+            left: 50%;
+            top: 23%;
+            margin-left: -24%;
+            text-align: center
+        }
+        
+        .ulList ul {
+            width: 31%;
+            display: inline-block;
+        }
+        
+        .ulList ul.ulTwo {
+            margin: 0 3%
+        }
+        
+        .ulList ul li {
+            text-align: center;
+            background-color: #1dbaa7;
+            border-bottom: 3px solid #fff;
+            padding: 1.5% 0;
+            position: relative
+        }
+        
+        .ulList ul li:first-child {
+            padding-top: 20%;
+        }
+        
+        .ulList ul li img.img1 {
+            display: inline-block;
+            vertical-align: middle;
+            width: 28%;
+        }
+        
+        .ulList ul li:first-child img.img1 {
+            width: 35%;
+        }
+        
+        .ulList ul li .rankCon {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            margin-left: 3%;
+            position: relative
+        }
+        
+        .ulList ul li .rankCon h1 {
+            font-size: 24px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #fff;
+            color: #fff
+        }
+        
+        .ulList ul li:first-child .rankCon h1 {
+            font-size: 30px;
+        }
+        
+        .ulList ul li .rankCon img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 12%;
+        }
+        
+        .ulList ul li img.img2 {
+            position: absolute;
+        }
+        
+        .ulList ul.ulOne,
+        .ulList ul.ulThree {
+            position: relative;
+            top: 55px;
+        }
+        
+        .ulList ul.ulOne li img.img2 {
+            left: -11%;
+            top: -53%;
+            width: 118%;
+        }
+        
+        .ulList ul.ulTwo li img.img2 {
+            left: -5%;
+            top: -55%;
+            width: 110%;
+        }
+        
+        .ulList ul.ulThree li img.img2 {
+            left: -7.5%;
+            top: -55%;
+            width: 118.5%;
+        }
+        
+        .ulList ul li:first-child .rankCon p {
+            font-size: 16px;
+        }
+        
+        .ulList ul li:last-child {
+            border: none
+        }
+        
+        .ulList ul li .rankCon p {
+            font-size: 14px;
+            color: #37465b;
+            margin-top: 5%;
+        }
+        
+        @media screen and (max-width:1480px) {
+            .ulList ul li .rankCon h1 {
+                padding-bottom: 2px;
+            }
+            .ulList ul li:first-child {
+                padding-top: 18%;
+            }
+            .ulList ul li img.img1 {
+                width: 24%;
+            }
+            .ulList ul li:first-child img.img1 {
+                width: 28%;
+            }
+            .ulList ul li .rankCon h1 {
+                font-size: 18px;
+            }
+            .ulList ul li .rankCon p {
+                font-size: 12px;
+            }
+            .ulList ul li:first-child .rankCon h1 {
+                font-size: 24px;
+            }
+            .ulList ul li:first-child .rankCon p {
+                font-size: 14px;
+            }
+            .ulList ul {
+                width: 30%;
+            }
+        }
+        
+        @media screen and (max-width:1230px) {
+            .ulList ul li:first-child {
+                padding-top: 16%;
+            }
+            .ulList ul.ulOne,
+            .ulList ul.ulThree {
+                top: 40px;
+            }
+            .ulList ul li:first-child .rankCon h1 {
+                font-size: 16px;
+            }
+            .ulList ul.ulOne li img.img2,
+            .ulList ul.ulTwo li img.img2,
+            .ulList ul.ulThree li img.img2 {
+                top: -60%
+            }
+            .ulList ul li .rankCon h1 {
+                font-size: 14px
+            }
+            .secThree>img {
+                height: 900px;
+            }
+        }
+        
+        @media screen and (min-width:1600px) {
+            .ulList ul li:first-child .rankCon h1 {
+                font-size: 34px;
+            }
+            .ulList ul li:first-child .rankCon p {
+                font-size: 20px;
+            }
+            .ulList ul.ulOne,
+            .ulList ul.ulThree {
+                top: 72px;
+            }
+        }
+    </style>
+    <style>
+        .secFour {
+            width: 100%;
+            padding-top: 10px;
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/img12.png) repeat-y;
+            background-size: 100%;
+            padding-bottom: 5px;
+        }
+        
+        .homeList {
+            width: 51%;
+            margin: 0 auto;
+            background-color: #1ebb78;
+            padding-bottom: 2%
+        }
+        
+        .homeList ul {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: -15px;
+        }
+        
+        .homeList ul li {
+            width: 28%;
+            display: inline-block;
+            text-align: left;
+            background-color: #FFF;
+            border: 8px solid #fd533c;
+            border-top: 5px solid #fd533c;
+            margin-top: 15px;
+            position: relative;
+        }
+        
+        .homeList ul li:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -5%;
+            height: 100%;
+            width: 50%;
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/img20.png) no-repeat;
+            background-size: contain;
+            margin-left: -25%;
+            opacity: 0.6;
+        }
+        
+        .homeList ul li:nth-child(3n+2) {
+            margin: 0 2%;
+        }
+        
+        .homeList ul li img {
+            width: 86%;
+            margin: 6% auto
+        }
+        
+        .infoCon {
+            width: 86%;
+            margin: 0 auto
+        }
+        
+        .infoCon h1 {
+            padding: 5px 0;
+            text-indent: 1em;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #fd533c;
+            margin-bottom: 6%;
+        }
+        
+        .infoCon strong {
+            font-style: normal;
+            display: block;
+            margin: 6% 0;
+            color: #fd523e
+        }
+        
+        @media screen and (min-width:1500px) {
+            .infoCon p,
+            .infoCon strong {
+                font-size: 14px;
+            }
+        }
+        
+        footer {
+            width: 100%;
+            background-color: #fff;
+            padding: 6% 0;
+            position: relative;
+        }
+        
+        ul.footerNav {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center
+        }
+        
+        ul.footerNav li a {
+            color: #424242;
+            display: block;
+        }
+        
+        ul.footerNav li {
+            display: inline-block;
+            border-right: 1px solid #424242;
+        }
+        
+        ul.footerNav li a {
+            padding: 0 10px;
+        }
+        
+        ul.footerNav li a:hover {
+            text-decoration: underline;
+        }
+        
+        ul.footerNav li:last-child {
+            border-right: none
+        }
+        
+        footer p {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            position: relative
+        }
+        
+        footer p.act:after {
+            content: "";
+            position: absolute;
+            right: 30%;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/img15.png) no-repeat;
+            background-size: contain;
+            margin-top: -15px
+        }
+        
+        ul.navList li:first-child {
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon08.png) no-repeat right center
+        }
+        
+        footer img {
+            width: 12%;
+            position: absolute;
+            right: 10%;
+            top: -30%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <header>
+        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img01.png">
+        <ul class="clearfix navList">
+            <li><a href="javascript:void(0);">大粤网首页</a></li>
+            <li><a href="javascript:void(0);">城事</a></li>
+            <li><a href="javascript:void(0);">娱乐</a></li>
+            <li><a href="javascript:void(0);">房产</a></li>
+            <li><a href="javascript:void(0);">汽车</a></li>
+            <li><a href="javascript:void(0);">财经</a></li>
+            <li><a href="javascript:void(0);">数码</a></li>
+            <li><a href="javascript:void(0);">时尚</a></li>
+            <li><a href="javascript:void(0);">旅游</a></li>
+            <li><a href="javascript:void(0);">美食</a></li>
+            <li><a href="javascript:void(0);">健康</a></li>
+            <li><a href="javascript:void(0);">社区</a></li>
+            <li><a href="javascript:void(0);">更多</a></li>
+        </ul>
+        <div class="tipsCon">
+            <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img03.png">
+            <p>量价齐升XXX成黑马</p>
+        </div>
+    </header>
+    <!--头部结束-->
+
+    <!-- 内容开始 -->
+    <article>
+        <section class="sec secOne">
+            <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img04.png">
+            <p class="posip">
+                广州楼市一周榜单：量价齐升XXX成黑马 广州楼市一周榜 单：量价齐升XXX成黑马，广州楼市一周榜单：量价齐升XXX 成黑马，广州楼市一周榜单：量价齐升XXX成黑马，广州楼市 一周榜单：量价齐升XXX成黑马
+            </p>
+            <ul class="indexList">
+                <!-- 从化区指数 -->
+                <li class="li1">
+                    <span class="bg1">7685</span>
+                    <span class="bg2">263%</span>
+                    <span class="bg3">76853</span>
+                    <span class="bg4">-63%</span>
+                </li>
+
+                <!-- 花都区 -->
+                <li class="li2">
+                    <span class="bg1">7685</span>
+                    <span class="bg2">263%</span>
+                    <span class="bg3">76853</span>
+                    <span class="bg4">-63%</span>
+                </li>
+
+                <!-- 白云区 -->
+                <li class="li3">
+                    <span class="bg1">7685</span>
+                    <span class="bg2">263%</span>
+                    <span class="bg3">76853</span>
+                    <span class="bg4">-63%</span>
+                </li>
+
+                <!-- 曾城区 -->
+                <li class="li4">
+                    <span class="bg1">7685</span>
+                    <span class="bg2">263%</span>
+                    <span class="bg3">76853</span>
+                    <span class="bg4">-63%</span>
+                </li>
+
+                <!-- 番禺区 -->
+                <li class="li5">
+                    <span class="bg1">7685</span>
+                    <span class="bg2">263%</span>
+                    <span class="bg3">76853</span>
+                    <span class="bg4">-63%</span>
+                </li>
+
+                <!-- 南沙区 -->
+                <li class="li6">
+                    <span class="bg1">7685</span>
+                    <span class="bg2">263%</span>
+                    <span class="bg3">76853</span>
+                    <span class="bg4">-63%</span>
+                </li>
+
+                <!-- 荔湾区 -->
+                <li class="li7">
+                    <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img11.png">
+                    <p>荔湾区</p>
+                    <div>
+                        <span class="bg1">7685</span>
+                        <span class="bg2">263%</span>
+                        <span class="bg3">76853</span>
+                        <span class="bg4">-63%</span>
+                    </div>
+                </li>
+
+                <li class="li8">
+                    <div>
+                        <p class="p1">网签套数</p>
+                        <p class="p2">网签均价</p>
+                        <p class="p3">环比</p>
+                    </div>
+                </li>
+
+                <!-- 越秀区 -->
+                <li class="li9">
+                    <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/yx.png">
+                    <p>荔湾区</p>
+                    <div>
+                        <span class="bg1">7685</span>
+                        <span class="bg2">263%</span>
+                        <span class="bg3">76853</span>
+                        <span class="bg4">-63%</span>
+                    </div>
+                </li>
+
+                <!-- 黄埔区 -->
+                <li class="li10">
+                    <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/hp.png">
+                    <p>黄埔区</p>
+                    <div>
+                        <span class="bg1">7685</span>
+                        <span class="bg2">263%</span>
+                        <span class="bg3">76853</span>
+                        <span class="bg4">-63%</span>
+                    </div>
+                </li>
+
+                <!-- 天河区 -->
+                <li class="li11">
+                    <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/th.png">
+                    <p>天河区</p>
+                    <div>
+                        <span class="bg1">7685</span>
+                        <span class="bg2">263%</span>
+                        <span class="bg3">76853</span>
+                        <span class="bg4">-63%</span>
+                    </div>
+                </li>
+
+                <!-- 海珠区 -->
+                <li class="li12">
+                    <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/th.png">
+                    <p>海珠区</p>
+                    <div>
+                        <span class="bg1">7685</span>
+                        <span class="bg2">263%</span>
+                        <span class="bg3">76853</span>
+                        <span class="bg4">-63%</span>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="sec secTwo">
+            <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img05.png">
+            <div class="listCon">
+                <div class="navCon">
+                    <div class="navCon_c">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img06.png">
+                        <div class="navCon_c_p">
+                            <span>68635套</span>
+                            <p>广州万达</p>
+                            <p>文化旅游城</p>
+                        </div>
+                    </div>
+                    <div class="navCon_c">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img07.png">
+                        <div class="navCon_c_p navCon_c_p_a">
+                            <span>68635套</span>
+                            <p>广州万达</p>
+                            <p>文化旅游城</p>
+                        </div>
+                    </div>
+                    <div class="navCon_c">
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img08.png">
+                        <div class="navCon_c_p navCon_c_p_b">
+                            <span>68635套</span>
+                            <p>广州万达</p>
+                            <p>文化旅游城</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="shopList">
+                    <li>
+                        <span></span>
+                        <span>名称</span>
+                        <span>区城</span>
+                        <span>套数</span>
+                    </li>
+                    <li>
+                        <span>04</span>
+                        <span>文化旅游城</span>
+                        <span>增城</span>
+                        <span>3245</span>
+                    </li>
+                    <li>
+                        <span>05</span>
+                        <span>凤凰城</span>
+                        <span>黄埔</span>
+                        <span>3245</span>
+                    </li>
+                    <li>
+                        <span>06</span>
+                        <span>文化旅游城</span>
+                        <span>增城</span>
+                        <span>3245</span>
+                    </li>
+                    <li>
+                        <span>07</span>
+                        <span>文化旅游城</span>
+                        <span>增城</span>
+                        <span>3245</span>
+                    </li>
+                    <li>
+                        <span>08</span>
+                        <span>文化旅游城</span>
+                        <span>增城</span>
+                        <span>3245</span>
+                    </li>
+                    <li>
+                        <span>09</span>
+                        <span>文化旅游城</span>
+                        <span>增城</span>
+                        <span>3245</span>
+                    </li>
+                    <li>
+                        <span>10</span>
+                        <span>文化旅游城</span>
+                        <span>增城</span>
+                        <span>3245</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="sec secThree">
+            <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img09.png">
+            <div class="ulList">
+                <ul class="ulOne">
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <img class="img2" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img10.png">
+                        <div class="rankCon">
+                            <h1>TOP 01</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 02</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 03</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 04</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 05</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 06</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 07</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 08</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 09</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 10</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="ulTwo">
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <img class="img2" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img17.png">
+                        <div class="rankCon">
+                            <h1>TOP 01</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 02</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 03</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 04</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 05</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 06</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 07</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 08</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 09</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 10</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="ulThree">
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <img class="img2" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img18.png">
+                        <div class="rankCon">
+                            <h1>TOP 01</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 02</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 03</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 04</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 05</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 06</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 07</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 08</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 09</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img1" src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img19.png">
+                        <div class="rankCon">
+                            <h1>TOP 10</h1>
+                            <p>倾城国际倾城</p>
+                            <div class="iconList">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/icon06.png">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="sec secFour">
+            <div class="homeList">
+                <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img14.png">
+                <ul>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img16.png">
+                        <div class="infoCon">
+                            <h1>倾城国际</h1>
+                            <p>
+                                <span>位置 : </span>
+                                <span>天河区XX路</span>
+                            </p>
+                            <p>
+                                <span>动态 : </span>
+                                <span>商业广场SOHO公寓启动认筹</span>
+                            </p>
+                            <strong>400-819-1111转745640</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </article>
+    <!-- 内容结束 -->
+
+    <!-- 页脚开始 -->
+    <footer>
+        <img src="http://mat1.gtimg.com/house_guangzhou/house/0413fc/img13.png">
+        <ul class="footerNav">
+            <li>
+                <a href="javascript:void(0);">关于腾讯</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">关于腾讯 · 大粤网</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">服务条款</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">开放平台</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">广告服务</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">腾讯 · 大粤网招聘</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">腾讯招聘</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">腾讯公益</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">客服中心 </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">网站导航</a>
+            </li>
+        </ul>
+        <p class="act">Copyright ? 1998-2012 Tencent All Rights Reserved</p>
+        <p>腾讯公司 版权所有</p>
+    </footer>
+    <!-- 页脚结束 -->
+
+</body>
+
+</html>

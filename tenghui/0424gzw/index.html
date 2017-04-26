@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>星耀公主湾 我是情歌王</title>
+    <link rel="stylesheet" href="http://gz.house.qq.com/house/0406bl/zzq_base.css">
+    <link href="http://gz.game.leju.com/201604/tyhjhy/css/swiper3.06.min.css" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        body {
+            background: url(bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .slide1 {
+            position: relative;
+            z-index: 111;
+        }
+        
+        .slide1>img {
+            width: 88%;
+            margin: 5% auto 0;
+        }
+        
+        .container {
+            height: 100%;
+        }
+        
+        .pageTxt {
+            text-align: center;
+        }
+        
+        .pageTxt>p {
+            font-size: 18px;
+            color: #fbd8a0;
+            line-height: 1.3;
+        }
+        
+        .pageTxt>img {
+            width: 44%;
+            margin: 2.5% auto;
+        }
+        
+        .pageTxt>span {
+            display: block;
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .logoList1 {
+            margin: 3% auto 0;
+            text-align: center
+        }
+        
+        .logoList1 span {
+            display: inline-block;
+            font-size: 12px;
+            color: #fff;
+            background-color: #676767;
+            vertical-align: middle;
+            padding: 1% 3%;
+            border-radius: 5px;
+            transform: scale(0.9)
+        }
+        
+        .logoList1 img.img1 {
+            width: 70%;
+            margin:3% auto;
+            position: relative;
+            z-index: 1000;
+        }
+        
+        .logoList2 {
+            text-align: center;
+            margin-top: 2%;
+        }
+        
+        .logoList2 img {
+            width: 18%;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 2%;
+        }
+        
+        .logoList2 img:first-child {
+            margin-left: 0;
+        }
+        
+        .info {
+            position: absolute;
+            left: 0;
+            bottom: 12%;
+            width: 100%;
+            z-index: 11;
+        }
+        
+        .zin {
+            position: relative;
+            z-index: 11;
+        }
+        
+        img.img3 {
+            position: fixed;
+            width: 164%;
+            left: 50%;
+            margin-left: -82%;
+            bottom: -60%;
+        }
+        
+        img.sca {
+            transform: scale(0);
+            animation:sca 0.6s 0.2s forwards ease-in-out;
+        }
+    
+        @-webkit-keyframes sca {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(0.7);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        img.rotat {
+            animation: go 5s infinite linear;
+        }
+        
+        @-webkit-keyframes go {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .slide2 {
+            position: relative;
+            z-index: 112;
+            /*-webkit-transform-style: preserve-3d;*/
+        }
+        
+        /*.slide2>img {
+            -webkit-backface-visibility: hidden;
+            -webkit-transform:translate3d(0,0,0)
+        }*/
+
+        .slide2>img.img1 {
+            position: absolute;
+            left: -70%;
+            top: 10%;
+            z-index: 110;
+            width: 70%;
+        }
+
+        .slide2>img.img2 {
+            width: 90%;
+            position: absolute;
+            right: -90%;
+            top:2%;
+            z-index: 111;
+        }
+        
+        .slide2>img.left {
+            animation:left 0.6s forwards ease-in-out;
+        }
+
+        .slide2>img.right {
+            animation:right 0.6s forwards ease-in-out;
+        }
+
+        @-webkit-keyframes left {
+            0% {
+                left:-70%;
+                /*transform:translate3d(0,0,0);*/
+            }
+            50% {
+                left: 14%;
+                /*transform:translate3d(120%,0,0);*/
+            }
+            75% {
+                left: 4%;
+                /*transform:translate3d(110%,0,0);*/
+            }
+            100% {
+                left: 14%;
+                /*transform:translate3d(120%,0,0);*/
+            }
+        }
+
+        @-webkit-keyframes right {
+            0% {
+                right: -90%;
+                /*transform:translate3d(0,0,0);*/
+            }
+            50% {
+                right: 0%;
+                /*transform:translate3d(-100%,0,0);*/
+            }
+            75% {
+                right: -10%;
+                /*transform:translate3d(-90%,0,0);*/
+            }
+            100% {
+                right: 0%;
+                /*transform:translate3d(-100%,0,0);*/
+            }
+        }
+
+        .context {
+            width: 100%;
+            position: absolute;
+            bottom:15%;
+            left: 0;
+            z-index: 112;
+        }
+        
+        .context p {
+            font-size: 14px;
+            text-align: center;
+            color: #fbd8a0;
+            line-height: 1.4
+        }
+        
+        .contextAct {
+            opacity: 0;
+            animation: fade 1s 0.8s forwards ease-out;
+        } 
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide3>.context {
+            margin-top: 0;
+        }
+        
+        .one {
+            width: 80%;
+            margin: 4% auto 0;
+            text-align: right;
+            position: relative;
+            z-index: 11;
+        }
+        
+        .one img {
+            display: inline-block;
+            width: 20%;
+        }
+        
+        .two {
+            width: 100%;
+            margin-top: 2%;
+            text-align: center;
+            position: relative;
+            z-index: 11;
+        }
+        
+        .two p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #fbd8a0;
+        }
+        
+        .slide4 {
+            position: relative;
+            z-index: 1113;
+        }
+
+        .slide4 img.img5 {
+            width: 66%;
+            margin: -2% auto 0;
+            position: relative;
+            z-index: 11;
+        }
+        
+        .slide5 img.img5 {
+            width: 56%;
+            position: absolute;
+            left: 50%;
+            margin-left: -28%;
+            top: -33%;
+            opacity: 0;
+        }
+        
+        img.img6 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        body img.act {
+            animation: goTop 0.5s forwards ease-out;
+        }
+        
+        @-webkit-keyframes goTop {
+            from {
+                bottom: -60%;
+            }
+            to {
+                bottom: 58%;
+            }
+        }
+
+        .slide3 .pic1 {
+            position: absolute;
+            left: -80%;
+            top: 13%;
+            width: 80%;
+        }
+
+        .slide3 .pic2 {
+            position: absolute;
+            right: -100%;
+            top:-10%;
+        }
+
+        .slide3 .pic3 {
+            width: 70%;
+            margin-left: 20%;
+            margin-bottom: -30px
+        }
+    
+        .slide3 >img.left {
+            animation:left1 0.6s forwards ease-in-out;
+        }
+
+        .slide3 >img.right {
+            animation:right1 0.6s forwards ease-in-out;
+        }
+
+        @-webkit-keyframes left1 {
+            0% {
+                left:-80%;
+            }
+            50% {
+                left: 14%;
+            }
+            75% {
+                left: 4%;
+            }
+            100% {
+                left: 14%;
+            }
+        }
+
+        @-webkit-keyframes right1 {
+            0% {
+                right:-100%;
+            }
+            50% {
+                right: 0%;
+            }
+            75% {
+                right: -10%;
+            }
+            100% {
+                right: 0%;
+            }
+        }
+
+        .context2 {
+            opacity: 0;
+        }
+
+        .two {
+            opacity: 0;
+        }
+
+        .twoAct {
+            animation: opa 0.6s 0.6s forwards ease-in-out;
+        }
+
+        @-webkit-keyframes opa {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .slide4 >img.pic4 {
+            transform: scale(0);
+        }
+
+        .slide4 >img.picA {
+            animation: scal 0.6s 1.2s forwards ease-in-out;
+        }
+
+        @-webkit-keyframes scal {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(0.8);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .slide5 img.img7 {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%
+        }
+
+        .slide5 img.act1 {
+            animation: act1 0.8s forwards ease-in-out;
+        }
+
+        @-webkit-keyframes act1 {
+            from {
+                top:-33%;
+                opacity: 0;
+            }
+            to {
+                top:8%;
+                opacity: 1;
+            }
+        }
+
+        .slide5 img.act2 {
+            animation: act2 0.4s 0.4s forwards ease-in-out;
+        }
+        
+        @-webkit-keyframes act2 {
+            from {
+                top:100%;
+            }
+            to {
+                top:26%;
+            }
+        }
+
+        .btnList a {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top:100%;
+        }
+
+        .btnList a.acta {
+            animation:acta 0.4s 0.8s forwards ease-in-out;
+        }
+
+        .btnList a.actb {
+            animation:actb 0.4s 1.2s forwards ease-in-out;
+        }
+
+        .btnList a.actc {
+            animation:actc 0.4s 1.6s forwards ease-in-out;
+        }
+        
+        @-webkit-keyframes acta {
+            from {
+                top:100%;
+            }
+            to {
+                top:54%;
+            }
+        }
+
+        @-webkit-keyframes actb {
+            from {
+                top:100%;
+            }
+            to {
+                top:66%;
+            }
+        }
+
+        @-webkit-keyframes actc {
+            from {
+                top:100%;
+            }
+            to {
+                top:78%;
+            }
+        }
+        
+        .swiper-slide {
+            position: relative;
+        }
+
+        img.tips {
+            position: absolute;
+            bottom: 5px;
+            width: 30px;
+            left: 50%;
+            margin-left: -15px;
+            animation: tips 0.8s infinite linear;
+            opacity: 0;
+        }
+
+        @-webkit-keyframes tips {
+            from {
+                opacity: 0;
+                bottom:5px;
+            }
+            to {
+                opacity: 1;
+                bottom: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <img src="img02.png" class="sca">
+                <div class="info">
+                    <div class="pageTxt zin">
+                        <p>亚洲乐坛巨星X X X</p>
+                        <p>强势加盟</p>
+                        <img src="1.gif">
+                        <span>活动报名通道载入中</span>
+                    </div>
+                    <div class="logoList1 zin">
+                        <img src="1-3.png" class="img1">
+                    </div>
+                </div>
+                <img src="icon.png" class="tips">
+            </div>
+            <div class="swiper-slide slide2">
+                <div class="one">
+                    <img src="img07.png">
+                </div>
+                <img src="2-2.png" class="img1">
+                <img src="2-1.png" class="img2">
+                <div class="context context1">
+                    <img src="2-3.png">
+                    <p>那首让你听着红了脸的歌，你还记得吗？</p>
+                    <p>那首让你躁动整个青春的歌，你还哼得出旋律吗？</p>
+                    <p>浮华盛世 停下你赶路的脚步</p>
+                    <p>一场让你重归内心的相遇</p>
+                    <p>献给 最特别的你</p>
+                </div>
+                <img src="icon.png" class="tips">
+            </div>
+            <div class="swiper-slide slide2 slide3">
+                <div class="one">
+                    <img src="img07.png">
+                </div>
+                <img src="3-3.png" class="pic1">
+                <img src="3-2.png" class="pic2">
+                <div class="context context2">
+                    <img src="3-1.png" class="pic3">
+                    <p>碧海蓝天尽收眼底</p>
+                    <p>无限遐想旖旎风光</p>
+                    <p>异域风情如梦如幻</p>
+                    <p>悠游新马 触碰不一样的世界</p>
+                    <p>这次，放飞音乐梦想，给身心一次奢侈的休憩</p>
+                </div>
+                <img src="icon.png" class="tips">
+            </div>
+            <div class="swiper-slide slide4" style="position: relative;z-index: 11111">
+                <div class="one">
+                    <img src="img07.png">
+                </div>
+                <div class="two">
+                    <p>你说你是行走的点唱机 ;</p>
+                    <p>你说你是真正的K歌麦霸 ;</p>
+                    <p>你说你是移动的小曲库......</p>
+                </div>
+                <img src="img06.png" class="img5 pic4">
+                <img src="img08.png" class="img6">
+                <img src="icon.png" class="tips">
+            </div>
+            <div class="swiper-slide slide4 slide5">
+                <div class="one">
+                    <img src="img07.png">
+                </div>
+                <img src="5-1.png" class="img5">
+                <img src="5-2.png" class="img7">
+                <div class="btnList">
+                    <a href="javascript:void(0);" class="a1">
+                        <img src="img10.png">
+                    </a>
+                    <a href="javascript:void(0);" class="a2">
+                        <img src="img11.png">
+                    </a>
+                    <a href="javascript:void(0);" class="a3">
+                        <img src="img12.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="img03.png" class="img3 rotat">
+
+    <audio preload="autoplay" id="car_audio" src="01.mp3" loop></audio>
+    <script src="http://mat1.gtimg.com/house_guangzhou/house/0419bl/zepto.min.js"></script>
+    <script type="text/javascript" src="http://gz.game.leju.com/201604/tyhjhy/js/swiper3.06.min.js"></script>
+    <script>
+        $(function() {
+            load();
+            var flag = false;
+            var mySwiper = new Swiper(".container", {
+                direction: 'vertical',
+                resistanceRatio: 0,
+                onSlideChangeStart: function(swiper) {
+                    switch(swiper.activeIndex) {
+                        case 0:
+                            $(".slide1 >img").addClass("sca");
+                            $(".slide2 .img1").removeClass("left");
+                            $(".slide2 .img2").removeClass("right");
+                            $(".context1").removeClass("contextAct");
+                            flag = false;
+                            $(".img3").css({
+                                bottom: "-60%"
+                            })
+                            break;
+                        case 1:
+                            $(".slide1 >img").removeClass("sca");
+                            $(".slide2 .img1").addClass("left");
+                            $(".slide2 .img2").addClass("right");
+                            $(".context1").addClass("contextAct");
+                            $(".slide3 .pic1").removeClass("left");
+                            $(".slide3 .pic2").removeClass("right");
+                            $(".context2").removeClass("contextAct");
+                            flag = false;
+                            $(".img3").css({
+                                bottom: "-60%"
+                            })
+                            break;
+                        case 2:
+                            $(".slide2 .img1").removeClass("left");
+                            $(".slide2 .img2").removeClass("right");
+                            $(".slide3 .pic1").addClass("left");
+                            $(".slide3 .pic2").addClass("right");
+                            $(".context1").removeClass("contextAct");
+                            $(".context2").addClass("contextAct");
+                            $(".two").removeClass("twoAct");
+                            $(".slide4 >img.pic4").removeClass("picA");
+                            flag = false;
+                            $(".img3").css({
+                                bottom: "-60%"
+                            })
+                            break;
+                        case 3:
+                            $(".slide3 .pic1").removeClass("left");
+                            $(".slide3 .pic2").removeClass("right");
+                            $(".context2").removeClass("contextAct");
+                            $(".two").addClass("twoAct");
+                            $(".slide4 >img.pic4").addClass("picA");
+                            $(".slide5 img.img5").removeClass("act1");
+                            $(".slide5 img.img7").removeClass("act2");
+                            $(".btnList a.a1").removeClass("acta");
+                            $(".btnList a.a2").removeClass("actb");
+                            $(".btnList a.a3").removeClass("actc");
+                            if (!flag) {
+                                $(".img3").addClass("act");
+                                var img3 = $(".img3").get(0);
+                                img3.addEventListener("webkitAnimationEnd",function(){
+                                    $(".img3").css({
+                                        bottom: "58%"
+                                    })
+                                    $(".img3").removeClass("act");
+                                    $(".img3").addClass("rotat");
+                                })
+                            }else{
+                                $(".img3").css({
+                                    bottom: "58%"
+                                })
+                            }
+                            break;
+                        case 4:
+                            $(".two").removeClass("twoAct");
+                            $(".slide4 >img.pic4").removeClass("picA");
+                            $(".slide5 img.img5").addClass("act1");
+                            $(".slide5 img.img7").addClass("act2");
+                            $(".btnList a.a1").addClass("acta");
+                            $(".btnList a.a2").addClass("actb");
+                            $(".btnList a.a3").addClass("actc");
+                            flag = true;
+                            $(".img3").css({
+                                bottom: "58%"
+                            })
+
+                    }
+                }
+            })
+
+            function load() {
+                audioAutoPlay('car_audio');;
+            }
+
+            // 解决ios音乐不自动播放的兼容问题
+            function audioAutoPlay(id) {
+                var audio = document.getElementById(id);
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function() {
+                    audio.play();
+                }, false);
+                document.addEventListener('YixinJSBridgeReady', function() {
+                    audio.play();
+                }, false);
+            }
+        })
+    </script>
+    
+    <script>
+        // 分享好友标题
+        var shareTitle = '星耀公主湾 我是情歌王';
+        // 分享描述
+        var descContent = '王者驾到 一场与大咖面对面的音乐盛宴';
+        // 分享朋友圈标题
+        var shareTimeLineTitle = '星耀公主湾 我是情歌王';
+        // 分享缩略图(100x100)
+        var imgUrl = 'share.jpg'
+        // 分享链接
+        var lineLink = window.location.href;
+        var appid = '';
+
+        function shareFriend() {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "appid": appid,
+                "img_url": imgUrl,
+                "img_width": "120",
+                "img_height": "120",
+                "link": lineLink,
+                "desc": descContent,
+                "title": shareTitle
+            }, function(res) {
+                _report('send_msg', res.err_msg);
+            })
+        }
+
+        function shareTimeline() {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": imgUrl,
+                "img_width": "120",
+                "img_height": "120",
+                "link": lineLink,
+                "desc": descContent,
+                "title": shareTimeLineTitle
+            }, function(res) {
+                _report('timeline', res.err_msg);
+            });
+        }
+
+        function shareWeibo() {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": descContent,
+                "url": lineLink,
+            }, function(res) {
+                _report('weibo', res.err_msg);
+            });
+        }
+
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+            // 分享好友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                shareFriend();
+            });
+
+            // 分享朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {
+                shareTimeline();
+            });
+
+            // 分享微博
+            WeixinJSBridge.on('menu:share:weibo', function(argv) {
+                shareWeibo();
+            });
+        }, false);
+    
+    </script>
+
+</body>
+
+</html>

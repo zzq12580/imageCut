@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="GB2312">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <title>�䳲&�����˱�������֮����ս������ͨ��</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: "microsoft yahei";
+            background-color: black;
+        }
+        
+        .box {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            background-color: #000;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+        }
+        
+        .n1 {
+            position: absolute;
+            left: 15%;
+            top: 50%;
+            width: 25%;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            font-size: 15px;
+            border: 0;
+            border-radius: 5px;
+            color: #E3C46C;
+            background: transparent;
+        }
+        
+        .n2 {
+            position: absolute;
+            left: 15%;
+            top: 56%;
+            width: 25%;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            font-size: 15px;
+            border: 0;
+            border-radius: 5px;
+            background: transparent;
+            color: #E3C46C;
+        }
+        
+        .n3 {
+            position: absolute;
+            left: 15%;
+            top: 66%;
+            width: 25%;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            font-size: 15px;
+            border: 0;
+            border-radius: 5px;
+            background: transparent;
+            color: #E3C46C;
+        }
+        
+        .name {
+            position: absolute;
+            left: 41%;
+            top: 50%;
+            width: 33%;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 15px;
+            border-color: #E3C46C;
+            border-radius: 1px;
+            background: transparent;
+            color: #E3C46C;
+        }
+        
+        .tel {
+            position: absolute;
+            left: 41%;
+            top: 56%;
+            width: 33%;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 15px;
+            border-color: #E3C46C;
+            border-radius: 1px;
+            background: transparent;
+            color: #E3C46C;
+        }
+        
+        .age {
+            position: absolute;
+            left: 41%;
+            top: 62%;
+            width: 33%;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 15px;
+            border-color: #E3C46C;
+            border-radius: 1px;
+            background: transparent;
+            color: #E3C46C;
+        }
+        
+        .bn {
+            position: absolute;
+            left: 25%;
+            top: 65%;
+            width: 23%;
+            height: 35px;
+            border-radius: 1px;
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0401Lh/btn.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 1;
+            font-size: 18px;
+            z-index: 100;
+            color: white;
+            border: 0;
+        }
+        
+        .bn2 {
+            position: absolute;
+            left: 55%;
+            top: 65%;
+            width: 23%;
+            height: 35px;
+            border-radius: 1px;
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0401Lh/btn2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 1;
+            font-size: 18px;
+            z-index: 100;
+            color: white;
+            border: 0;
+            z-index: 100;
+        }
+        
+        .bn3 {
+            position: absolute;
+            left: 25%;
+            top: 66%;
+            width: 23%;
+            height: 35px;
+            border-radius: 1px;
+            background: url(http://mat1.gtimg.com/house_guangzhou/house/0401Lh/btn3.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            opacity: 1;
+            font-size: 18px;
+            z-index: 100;
+            color: white;
+            border: 0;
+            z-index: 100;
+        }
+        
+        #tu {
+            width: 100%;
+            height: 100%;
+            margin-bottom: -5px;
+        }
+        
+        #gz {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 230;
+        }
+        
+        #tu1 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 200;
+        }
+        
+        #tu2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 3%;
+            left: 0;
+            z-index: 200;
+        }
+        
+        .modal-dialog {
+            margin-top: 40%;
+        }
+        
+        .tt {
+            -webkit-animation: bounce 1s infinite ease both;
+            -moz-animation: bounce 1s infinite ease both;
+        }
+        
+        @-webkit-keyframes bounce {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -webkit-transform: translateY(0)
+            }
+            40% {
+                -webkit-transform: translateY(-30px)
+            }
+            60% {
+                -webkit-transform: translateY(-15px)
+            }
+        }
+        
+        @-moz-keyframes bounce {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                -moz-transform: translateY(0)
+            }
+            40% {
+                -moz-transform: translateY(-30px)
+            }
+            60% {
+                -moz-transform: translateY(-15px)
+            }
+        }
+    </style>
+</head>
+
+<body onload="load()">
+    <div class="box">
+        <audio preload="autoplay" id="car_audio" src="http://mat1.gtimg.com/house_guangzhou/house/0401Lh/Dreamtale1.mp3" loop></audio>
+        <img id="tu" src="http://mat1.gtimg.com/house_guangzhou/house/0401Lh/bg.jpg">
+        <img id="gz" src="http://mat1.gtimg.com/house_guangzhou/house/0401Lh/gz1.jpg" style="display:none;" onclick="cx()">
+        <!--<input class="n1" type="text" value="����" readonly>
+        <input class="n2" type="text" value="��ϵ��ʽ" readonly>
+        <input type="hidden" name="openid" value="">
+        <input class="name n4" type="text" name="name" placeholder="">
+        <input class="tel n5" type="tel" name="tel" placeholder="">
+        <input class=" bn " name="sub " type="button ">-->
+
+    </div>
+
+    <script>
+        function load() {
+            audioAutoPlay('car_audio');;
+        }
+
+        // ����ios���ֲ��Զ����ŵ�??????
+        function audioAutoPlay(id) {
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function() {
+                audio.play();
+            }, false);
+            document.addEventListener('YixinJSBridgeReady', function() {
+                audio.play();
+            }, false);
+        }
+    </script>
+
+    <!-- �������忪??? -->
+    <iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
+    <form name="form1" id="form1" method="post" action="http://huiyan.qq.com/userApply/apply" target="id_iframe" class="huiyan-form" accept-charset="UTF-8">
+        <input type="hidden" name="activity_id" value="19074">
+        <input type="hidden" name="attr_list" value="133,70">
+        <input type="hidden" name="site" value="houseguangzhou">
+        <div class="control-group">
+            <label class="control-label n1">����<span class='required-icon'></span></label>
+            <div class="controls">
+                <input type="text" class="input-xxlarge name" name="form_70_1" myRequired="1" myHidden="0">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label n2">��ϵ��ʽ<span class='required-icon'></span></label>
+            <div class="controls">
+                <input type="text" placeholder="" class="input-xxlarge phoneNum tel" name="form_133_1" identifyName="form_133_2" myRequired="1">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+                <button class="btn bn" id="submitBtn"></button>
+                <a class="bn2" onclick="document.getElementById( 'gz').style.display='block' "></a>
+            </div>
+        </div>
+    </form>
+    <!-- ������������ -->
+
+    <!-- ???�Ի��ű������ģ���ȷ������ҳ-->
+    <script>
+        (function($) {
+            $.getScript("http://mat1.gtimg.com/tech/css/huiyan/huiyan_base_v1.4.min.js?r=" + Math.random(), function() {
+                $(document).ready(function() {
+                    $.createToolkit.generatePhoneIdentify();
+                });
+                $("#submitBtn").click(function(event) {
+                    event.preventDefault();
+                    var n1 = $(".name").val();
+                    var n2 = $(".tel").val();
+                    if (n1 == "") {
+                        alert("����д???��");
+                    } else if (n1 != "" && n2 == "") {
+                        alert("�������绰�ź���");
+                    } else if (n1 != "" && n2 != "") {
+                        if ($.createToolkit.commonCheck()) {
+                            $.createToolkit.escapeHtml();
+                            var originCode = document.charset;
+                            if (document.all)
+                                document.charset = 'utf-8';
+                            $("#form1").submit();
+                            document.charset = originCode;
+                            $.createToolkit.unescapeHtml();
+
+                        }
+                    }
+
+                });
+            });
+        })(jQuery);
+        document.domain = "qq.com";
+
+        //�����ɹ��Ļص�������������Ҫ���Ըĺ����壬������������???
+        //������֧�ֻ���ϵͳͬ��������qq.com���ڵĻص��������ص��������ᴥ��
+        function huiyan_success_callback() {
+            alert("�����ɹ�");
+            window.location.href = "http://gz.house.qq.com/a/20170331/041299.htm";
+        }
+
+        function huiyan_fail_callback(errorMsg) {
+            huiyanAlert(errorMsg);
+        }
+    </script>
+
+</body>
+
+</html>
+<script>
+    function cx() {
+        document.getElementById('gz').style.display = 'none';
+    }
+</script>
